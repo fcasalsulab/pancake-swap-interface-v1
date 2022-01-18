@@ -63,7 +63,7 @@ function useSwapCallArguments(
     swapMethods.push(
       // @ts-ignore
       Router.swapCallParameters(trade, {
-        feeOnTransfer: false,
+        feeOnTransfer: true,
         allowedSlippage: new Percent(JSBI.BigInt(Math.floor(allowedSlippage)), BIPS_BASE),
         recipient,
         ttl: deadline,

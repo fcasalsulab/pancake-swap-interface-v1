@@ -34,15 +34,15 @@ const config: MenuEntry[] = [
     ],
   },
   {
-    label: 'Farms',
+    label: 'Farms (SOON)',
     icon: 'FarmIcon',
-    href: 'https://pancakeswap.finance/farms',
+    href: '#',
   },
   {
-    label: 'Pools',
+    label: 'Pools (SOON)',
     icon: 'PoolIcon',
-    href: 'https://pancakeswap.finance/pools',
-  },
+    href: '#',
+  }/* ,
   {
     label: 'Prediction (BETA)',
     icon: 'PredictionsIcon',
@@ -62,7 +62,7 @@ const config: MenuEntry[] = [
     label: 'Team Battle',
     icon: 'TeamBattleIcon',
     href: 'https://pancakeswap.finance/competition',
-  },
+  } *//* ,
   {
     label: 'Teams & Profile',
     icon: 'GroupsIcon',
@@ -80,7 +80,7 @@ const config: MenuEntry[] = [
         href: 'https://pancakeswap.finance/profile',
       },
     ],
-  },
+  } *//* ,
   {
     label: 'Info',
     icon: 'InfoIcon',
@@ -107,7 +107,7 @@ const config: MenuEntry[] = [
     label: 'IFO',
     icon: 'IfoIcon',
     href: 'https://pancakeswap.finance/ifo',
-  },
+  } */,
   {
     label: 'More',
     icon: 'MoreIcon',
@@ -115,11 +115,11 @@ const config: MenuEntry[] = [
       {
         label: 'Contact',
         href: 'https://docs.pancakeswap.finance/contact-us',
-      },
+      }/* ,
       {
         label: 'Voting',
         href: 'https://voting.pancakeswap.finance',
-      },
+      } *//* ,
       {
         label: 'Github',
         href: 'https://github.com/pancakeswap',
@@ -135,7 +135,7 @@ const config: MenuEntry[] = [
       {
         label: 'Merch',
         href: 'https://pancakeswap.creator-spring.com/',
-      },
+      }, */
     ],
   },
 ]

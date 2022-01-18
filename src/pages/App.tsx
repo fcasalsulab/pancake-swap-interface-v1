@@ -18,7 +18,7 @@ import { RedirectPathToSwapOnly } from './Swap/redirects'
 import { EN, allLanguages } from '../constants/localisation/languageCodes'
 import { LanguageContext } from '../hooks/LanguageContext'
 import { TranslationsContext } from '../hooks/TranslationsContext'
-import UseV2ExchangeModal from '../components/UseV2ExchangeModal'
+
 
 import Menu from '../components/Menu'
 import useGetDocumentTitlePrice from '../hooks/useGetDocumentTitlePrice'
@@ -35,6 +35,8 @@ const BodyWrapper = styled.div`
   overflow-x: hidden;
   z-index: 1;
   margin-bottom: 64px;
+  background: rgb(168,75,75);
+background: linear-gradient(29deg, rgba(168,75,75,1) 0%, rgba(96,185,73,1) 50%, rgba(179,155,68,1) 100%);
   ${({ theme }) => theme.mediaQueries.lg} {
     margin-bottom: 0;
   }
@@ -55,18 +57,9 @@ export default function App() {
 
   const stringTranslationsApi = new StringTranslations(credentials)
 
-  const [hasSeenModal, setHasSeenModal] = useState(false)
-  const [onPresentUseV2ExchangeModal] = useModal(<UseV2ExchangeModal />)
 
-  useEffect(() => {
-    const showModal = () => {
-      onPresentUseV2ExchangeModal()
-      setHasSeenModal(true)
-    }
-    if (!hasSeenModal) {
-      showModal()
-    }
-  }, [onPresentUseV2ExchangeModal, hasSeenModal])
+
+
 
   const getStoredLang = (storedLangCode: string) => {
     return allLanguages.filter((language) => {
@@ -150,7 +143,7 @@ export default function App() {
                   </Web3ReactManager>
                 </BodyWrapper>
               </Menu>
-              <VersionBar />
+              {/* <VersionBar /> */}
             </TranslationsContext.Provider>
           </LanguageContext.Provider>
         </AppWrapper>

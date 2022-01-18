@@ -1,7 +1,7 @@
 import { TokenAmount, Pair, Currency } from '@pancakeswap-libs/sdk'
 import { useMemo } from 'react'
-import { abi as IUniswapV2PairABI } from '@uniswap/v2-core/build/IUniswapV2Pair.json'
 import { Interface } from '@ethersproject/abi'
+import { abi as IUniswapV2PairABI } from '../constants/abis/IUniswapV2Pair.json'
 import { useActiveWeb3React } from '../hooks'
 
 import { useMultipleContractSingleData } from '../state/multicall/hooks'
@@ -47,7 +47,12 @@ export function usePairs(currencies: [Currency | undefined, Currency | undefined
       if (loading) return [PairState.LOADING, null]
       if (!tokenA || !tokenB || tokenA.equals(tokenB)) return [PairState.INVALID, null]
       if (!reserves) return [PairState.NOT_EXISTS, null]
-      const { reserve0, reserve1 } = reserves
+     
+      const reserve0 = reserves["0"]
+      const reserve1 = reserves["1"]
+      console.log(reserve0)
+      console.log("--------")
+      console.log(reserves)
       const [token0, token1] = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA]
       return [
         PairState.EXISTS,

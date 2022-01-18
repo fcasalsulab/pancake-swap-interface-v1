@@ -36,7 +36,6 @@ import Loader from 'components/Loader'
 import useI18n from 'hooks/useI18n'
 import PageHeader from 'components/PageHeader'
 import ConnectWalletButton from 'components/ConnectWalletButton'
-import V2ExchangeRedirectModal from 'components/V2ExchangeRedirectModal'
 import AppBody from '../AppBody'
 
 const StyledLink = styled(Link)`
@@ -51,11 +50,7 @@ const Swap = () => {
   const [disableSwap, setDisableSwap] = useState(false)
   const [hasPoppedModal, setHasPoppedModal] = useState(false)
   const [interruptRedirectCountdown, setInterruptRedirectCountdown] = useState(false)
-  const [onPresentV2ExchangeRedirectModal] = useModal(
-    <V2ExchangeRedirectModal handleCloseModal={() => setInterruptRedirectCountdown(true)} />
-  )
-  const onPresentV2ExchangeRedirectModalRef = useRef(onPresentV2ExchangeRedirectModal)
-  // token warning stuff
+
   const [loadedInputCurrency, loadedOutputCurrency] = [
     useCurrency(loadedUrlParams?.inputCurrencyId),
     useCurrency(loadedUrlParams?.outputCurrencyId),
@@ -137,10 +132,7 @@ const Swap = () => {
 
     if (doesInputMatch && doesOutputMatch) {
       // Prevent infinite re-render of modal with this condition
-      if (!hasPoppedModal) {
-        setHasPoppedModal(true)
-        onPresentV2ExchangeRedirectModalRef.current()
-      }
+
 
       // Controls the swap buttons being disabled & renders a message
       setDisableSwap(true)
@@ -172,7 +164,6 @@ const Swap = () => {
     currencies,
     hasPoppedModal,
     modalCountdownSecondsRemaining,
-    onPresentV2ExchangeRedirectModalRef,
     interruptRedirectCountdown,
   ])
 

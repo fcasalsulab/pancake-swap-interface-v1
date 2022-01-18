@@ -62,8 +62,10 @@ export default function Pool() {
           title={TranslateString(262, 'Liquidity')}
           description={TranslateString(1168, 'Add liquidity to receive LP tokens')}
         >
-          <Button id="join-pool-button" disabled mb="16px">
-            {TranslateString(168, "You can't add liquidity on V1")}
+          <Button id="join-pool-button"  mb="16px"  >
+          <StyledInternalLink id="import-pool-link" to="/add" style={{color: "white"}}>
+                    {TranslateString(168, 'Add LP')}
+                  </StyledInternalLink>
           </Button>
         </PageHeader>
         <AutoColumn gap="lg" justify="center">

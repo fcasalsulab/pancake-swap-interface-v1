@@ -35,8 +35,7 @@ const BodyWrapper = styled.div`
   overflow-x: hidden;
   z-index: 1;
   margin-bottom: 64px;
-  background: rgb(168,75,75);
-background: linear-gradient(29deg, rgba(168,75,75,1) 0%, rgba(96,185,73,1) 50%, rgba(179,155,68,1) 100%);
+ 
   ${({ theme }) => theme.mediaQueries.lg} {
     margin-bottom: 0;
   }

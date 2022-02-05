@@ -19,7 +19,6 @@ import { EN, allLanguages } from '../constants/localisation/languageCodes'
 import { LanguageContext } from '../hooks/LanguageContext'
 import { TranslationsContext } from '../hooks/TranslationsContext'
 
-
 import Menu from '../components/Menu'
 import useGetDocumentTitlePrice from '../hooks/useGetDocumentTitlePrice'
 
@@ -35,7 +34,14 @@ const BodyWrapper = styled.div`
   overflow-x: hidden;
   z-index: 1;
   margin-bottom: 64px;
- 
+  background: 'rgb(220, 123, 17)';
+  background: linear-gradient(
+    45deg,
+    rgba(220, 123, 17, 1) 0%,
+    rgba(251, 219, 99, 1) 40%,
+    rgba(250, 215, 96, 1) 60%,
+    rgba(220, 123, 17, 1) 100%
+  );
   ${({ theme }) => theme.mediaQueries.lg} {
     margin-bottom: 0;
   }
@@ -55,10 +61,6 @@ export default function App() {
   }
 
   const stringTranslationsApi = new StringTranslations(credentials)
-
-
-
-
 
   const getStoredLang = (storedLangCode: string) => {
     return allLanguages.filter((language) => {

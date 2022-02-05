@@ -133,7 +133,6 @@ const Swap = () => {
     if (doesInputMatch && doesOutputMatch) {
       // Prevent infinite re-render of modal with this condition
 
-
       // Controls the swap buttons being disabled & renders a message
       setDisableSwap(true)
 
@@ -149,7 +148,7 @@ const Swap = () => {
       }
 
       if (modalCountdownSecondsRemaining <= 0) {
-        window.location.href = 'https://exchange.pancakeswap.finance/#/swap'
+        window.location.href = 'https://exchange.mirageswap.finance/#/swap'
       }
 
       return () => {
@@ -160,12 +159,7 @@ const Swap = () => {
     // Unset disableSwap state if the swap inputs & outputs dont match disabledSwaps
     setDisableSwap(false)
     return undefined
-  }, [
-    currencies,
-    hasPoppedModal,
-    modalCountdownSecondsRemaining,
-    interruptRedirectCountdown,
-  ])
+  }, [currencies, hasPoppedModal, modalCountdownSecondsRemaining, interruptRedirectCountdown])
 
   const parsedAmounts = showWrap
     ? {
@@ -483,7 +477,7 @@ const Swap = () => {
                 <Flex alignItems="center" justifyContent="center" mb="1rem">
                   <Text color="failure">
                     Please use{' '}
-                    <StyledLink external href="https://exchange.pancakeswap.finance">
+                    <StyledLink external href="https://exchange.mirageswap.finance">
                       PancakeSwap V2
                     </StyledLink>{' '}
                     to make this trade

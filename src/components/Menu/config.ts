@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://pancakeswap.finance/',
+    href: 'https://mirageswap.finance/',
   },
   {
     label: 'Trade',
@@ -21,11 +21,11 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Exchange',
-        href: 'https://exchange.pancakeswap.finance/#/swap',
+        href: 'https://exchange.mirageswap.finance/#/swap',
       },
       {
         label: 'Liquidity',
-        href: 'https://exchange.pancakeswap.finance/#/pool',
+        href: 'https://exchange.mirageswap.finance/#/pool',
       },
       {
         label: 'V1 Liquidity (Old)',
@@ -42,71 +42,71 @@ const config: MenuEntry[] = [
     label: 'Pools (SOON)',
     icon: 'PoolIcon',
     href: '#',
-  }/* ,
+  } /* ,
   {
     label: 'Prediction (BETA)',
     icon: 'PredictionsIcon',
-    href: 'https://pancakeswap.finance/prediction',
+    href: 'https://mirageswap.finance/prediction',
   },
   {
     label: 'Lottery',
     icon: 'TicketIcon',
-    href: 'https://pancakeswap.finance/lottery',
+    href: 'https://mirageswap.finance/lottery',
   },
   {
     label: 'Collectibles',
     icon: 'NftIcon',
-    href: 'https://pancakeswap.finance/nft',
+    href: 'https://mirageswap.finance/nft',
   },
   {
     label: 'Team Battle',
     icon: 'TeamBattleIcon',
-    href: 'https://pancakeswap.finance/competition',
-  } *//* ,
+    href: 'https://mirageswap.finance/competition',
+  } */ /* ,
   {
     label: 'Teams & Profile',
     icon: 'GroupsIcon',
     items: [
       {
         label: 'Leaderboard',
-        href: 'https://pancakeswap.finance/teams',
+        href: 'https://mirageswap.finance/teams',
       },
       {
         label: 'Task Center',
-        href: 'https://pancakeswap.finance/profile/tasks',
+        href: 'https://mirageswap.finance/profile/tasks',
       },
       {
         label: 'Your Profile',
-        href: 'https://pancakeswap.finance/profile',
+        href: 'https://mirageswap.finance/profile',
       },
     ],
-  } *//* ,
+  } */ /* ,
   {
     label: 'Info',
     icon: 'InfoIcon',
     items: [
       {
         label: 'Overview',
-        href: 'https://pancakeswap.info',
+        href: 'https://mirageswap.info',
       },
       {
         label: 'Tokens',
-        href: 'https://pancakeswap.info/tokens',
+        href: 'https://mirageswap.info/tokens',
       },
       {
         label: 'Pairs',
-        href: 'https://pancakeswap.info/pairs',
+        href: 'https://mirageswap.info/pairs',
       },
       {
         label: 'Accounts',
-        href: 'https://pancakeswap.info/accounts',
+        href: 'https://mirageswap.info/accounts',
       },
     ],
   },
   {
     label: 'IFO',
     icon: 'IfoIcon',
-    href: 'https://pancakeswap.finance/ifo',
+    href: 'https://mirageswap.finance/ifo',
   } */,
   {
     label: 'More',
@@ -114,28 +114,28 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Contact',
-        href: 'https://docs.pancakeswap.finance/contact-us',
-      }/* ,
+        href: 'https://docs.mirageswap.finance/contact-us',
+      } /* ,
       {
         label: 'Voting',
-        href: 'https://voting.pancakeswap.finance',
-      } *//* ,
+        href: 'https://voting.mirageswap.finance',
+      } */ /* ,
       {
         label: 'Github',
-        href: 'https://github.com/pancakeswap',
+        href: 'https://github.com/mirageswap',
       },
       {
         label: 'Docs',
-        href: 'https://docs.pancakeswap.finance',
+        href: 'https://docs.mirageswap.finance',
       },
       {
         label: 'Blog',
-        href: 'https://pancakeswap.medium.com',
+        href: 'https://mirageswap.medium.com',
       },
       {
         label: 'Merch',
-        href: 'https://pancakeswap.creator-spring.com/',
-      }, */
+        href: 'https://mirageswap.creator-spring.com/',
+      }, */,
     ],
   },
 ]
